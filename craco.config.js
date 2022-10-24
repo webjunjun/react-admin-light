@@ -76,9 +76,9 @@ module.exports = {
           lessOptions: {
             modifyVars: { '@primary-color': '#1890ff' },
             javascriptEnabled: true,
-            //配置全局less 变量，不需要在使用的地方导入了
+            //配置全局less变量，不需要在使用的地方导入了
             globalVars: {
-              hack: `true; @import '~@/assets/style/variable.less';`
+              hack: `true; @import '~@/assets/css/variable.less';`
             }
           }
         }

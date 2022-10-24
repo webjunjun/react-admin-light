@@ -1,5 +1,5 @@
 import logo from '../../assets/img/logo.svg';
-import '../../assets/css/home.scss';
+import '../../assets/css/home.less';
 import { Button } from 'antd';
 
 function App() {
