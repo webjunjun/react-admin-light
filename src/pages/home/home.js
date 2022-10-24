@@ -1,9 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from '../../assets/img/logo.svg';
+import '../../assets/css/home.scss';
+import { Button } from 'antd';
 
 function App() {
   return (
     <div className="App">
+      <div className="foobar">红红火火</div>
+      <Button type="primary">Button</Button>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
