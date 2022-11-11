@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router-dom';
 import { Breadcrumb, Layout } from 'antd';
 const { Content } = Layout
 
@@ -15,7 +16,7 @@ const LayoutContent = () => {
           minHeight: 360,
         }}
       >
-        Bill is a cat.
+        <Outlet />
       </div>
     </Content>
   )
