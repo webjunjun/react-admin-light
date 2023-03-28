@@ -1,34 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React from 'react';
+import { Layout, theme } from 'antd';
+import FooterLayout from './layout/FooterLayout';
+import SiderLayout from './layout/SiderLayout';
+import HeaderLayout from './layout/HeaderLayout';
+import BreadcrumbLayout from './layout/BreadcrumbLayout';
+import styled from 'styled-components';
 
-function App() {
-  const [count, setCount] = useState(0)
+const { Content } = Layout;
+
+const App: React.FC = () => {
+  const {
+    token: { colorBgContainer },
+  } = theme.useToken();
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
-}
+    <Layout style={{ minHeight: '100vh' }}>
+      <SiderLayout />
+      <Layout className="site-layout">
+        <HeaderLayout />
+        <Content style={{ margin: '0 16px' }}>
+          <BreadcrumbLayout />
+          <ContentWrap colorBg={colorBgContainer}>
+            Bill is a cat.
+          </ContentWrap>
+        </Content>
+        <FooterLayout />
+      </Layout>
+    </Layout>
+  );
+};
 
-export default App
+export default App;
+
+const ContentWrap = styled.div`
+  padding: 24px;
+  min-height: 360px;
+  background-color: ${(p: {colorBg: string}) => p.colorBg}
+`;
