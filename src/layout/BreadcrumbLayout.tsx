@@ -3,10 +3,10 @@ import { Breadcrumb } from 'antd';
 
 const BreadcrumbLayout: React.FC = () => {
   return (
-    <Breadcrumb style={{ margin: '16px 0' }}>
-      <Breadcrumb.Item>User</Breadcrumb.Item>
-      <Breadcrumb.Item>Bill</Breadcrumb.Item>
-    </Breadcrumb>
+    <Breadcrumb
+      items={[{title: 'User'}, {title: 'Bill'}]}
+      style={{ margin: '16px 0' }}
+    />
   );
 };
 

@@ -4,6 +4,7 @@ import FooterLayout from './layout/FooterLayout';
 import SiderLayout from './layout/SiderLayout';
 import HeaderLayout from './layout/HeaderLayout';
 import BreadcrumbLayout from './layout/BreadcrumbLayout';
+import Counter from './pages/CountPage/Counter';
 import styled from 'styled-components';
 
 const { Content } = Layout;
@@ -20,8 +21,9 @@ const App: React.FC = () => {
         <HeaderLayout />
         <Content style={{ margin: '0 16px' }}>
           <BreadcrumbLayout />
-          <ContentWrap colorBg={colorBgContainer}>
+          <ContentWrap $colorBg={colorBgContainer}>
             Bill is a cat.
+            <Counter />
           </ContentWrap>
         </Content>
         <FooterLayout />
@@ -32,8 +34,12 @@ const App: React.FC = () => {
 
 export default App;
 
-const ContentWrap = styled.div`
+/**
+ * 写在render外部 避免每次渲染都重新创建
+ * 变量命名需要带美元符号前缀
+ */
+const ContentWrap = styled.div<{$colorBg: string}>`
   padding: 24px;
   min-height: 360px;
-  background-color: ${(p: {colorBg: string}) => p.colorBg}
+  background-color: ${props => props.$colorBg}
 `;
