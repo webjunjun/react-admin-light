@@ -1,4 +1,3 @@
-import React from 'react';
 import { Layout, theme } from 'antd';
 import FooterLayout from './layout/FooterLayout';
 import SiderLayout from './layout/SiderLayout';

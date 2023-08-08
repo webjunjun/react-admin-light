@@ -6,7 +6,7 @@ const initialState: CounterState = {
 }
 
 // 创建counter切片并导出该切片
-export const counterSlice = createSlice({
+const counterSlice = createSlice({
   name: 'counter',
   initialState,
   reducers: {
