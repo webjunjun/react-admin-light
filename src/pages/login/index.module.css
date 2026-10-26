@@ -1,0 +1,106 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f7fa;
+  font-family:
+    system-ui,
+    -apple-system,
+    'PingFang SC',
+    'Microsoft YaHei',
+    sans-serif;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 360px;
+  padding: 40px 32px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.title {
+  margin: 0 0 4px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2329;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 0 0 32px;
+  font-size: 14px;
+  color: #8a919f;
+  text-align: center;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #1f2329;
+}
+
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #dcdfe6;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #1f2329;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input::placeholder {
+  color: #c0c4cc;
+}
+
+.input:focus {
+  border-color: #2563eb;
+}
+
+.submit {
+  width: 100%;
+  height: 40px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.tips {
+  margin-top: 24px;
+  padding: 12px 14px;
+  background-color: #f5f7fa;
+  border-radius: 8px;
+}
+
+.tipsTitle {
+  margin: 0 0 6px;
+  font-size: 12px;
+  color: #8a919f;
+}
+
+.tipsItem {
+  margin: 2px 0;
+  font-size: 13px;
+  color: #57606f;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}

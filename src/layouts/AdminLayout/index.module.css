@@ -1,0 +1,98 @@
+.root {
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-width: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  margin: 8px;
+  overflow: hidden;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+}
+
+.header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.userArea {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.userTrigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.userTrigger:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  /* 顶部 12px：选项卡卡片与 Header 分离，不再贴在一起 */
+  padding: 12px 16px 16px;
+  overflow: hidden;
+}
+
+.breadcrumb {
+  flex-shrink: 0;
+  margin: 10px 4px;
+}
+
+/*
+ * KeepAlive 容器：库默认内联 height:100%，但它在页签栏/面包屑之后，
+ * 100% 会超出内容区；这里用 flex:1 接管剩余高度（!important 覆盖内联）
+ */
+.aliveContainer {
+  flex: 1;
+  min-height: 0;
+  height: 0 !important;
+}
+
+.page {
+  height: 100%;
+  padding: 16px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
